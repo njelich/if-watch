@@ -9,9 +9,10 @@ description = "crossplatform asynchronous network watcher"
 repository = "https://github.com/mxinden/if-watch"
 
 [lib]
-crate-type = ["cdylib", "lib"]
+crate-type = ["lib"]
 
 [features]
+default = ["smol", "tokio"]
 tokio = ["dep:tokio", "rtnetlink/tokio_socket"]
 smol = ["dep:smol", "rtnetlink/smol_socket"]
 
